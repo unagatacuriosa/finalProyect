@@ -68,5 +68,5 @@ public class Hooks {
             scenario.attach(screenshot, "image/png", outputName);
         }
         log.info("Ending " + scenario.getName());
-        driver.close();
+        driver.quit();
     }}

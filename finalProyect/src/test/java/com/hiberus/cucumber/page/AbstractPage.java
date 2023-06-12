@@ -34,7 +34,7 @@ public abstract class AbstractPage {
     public void navigateTo(String url) {
         try {
             driver.navigate().to(url);
-        } catch (java.lang.Exception e) {
+        } catch (Exception e) {
             if (e instanceof TimeoutException) {
                 log.info("Timeout loading home page");
             } else if (e instanceof ScriptTimeoutException) {

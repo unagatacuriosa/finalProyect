@@ -14,11 +14,11 @@ import org.junit.runner.RunWith;
                 "html:target/cucumber-reports/cucumber-reports.html"
         },
         glue = {
-                "com.hiberus.cucumber.stepdefs",
-                "com.hiberus.cucumber.support"
+                "com/hiberus/cucumber/stepdefs",
+                "com/hiberus/cucumber/support"
         },
         features = {
-                "src/test/resources"
+                "src/test/features"
         }
 )
 public class CucumberRunnerTest {

@@ -1,0 +1,15 @@
+com\hiberus\cucumber\support\DataTestContext.class
+com\hiberus\cucumber\page\AbstractPage.class
+com\hiberus\cucumber\page\ProductPage.class
+com\hiberus\cucumber\page\RegisterPage.class
+com\hiberus\cucumber\Runner\CucumberRunnerTest.class
+com\hiberus\cucumber\support\Hooks.class
+com\hiberus\cucumber\page\CheckoutPage.class
+com\hiberus\cucumber\stepdefs\checkout\CheckoutPageSteps.class
+com\hiberus\cucumber\ultils\Flags.class
+com\hiberus\cucumber\page\PagesFactory.class
+com\hiberus\cucumber\model\InventoryItem.class
+com\hiberus\cucumber\stepdefs\register\RegisterPageSteps.class
+com\hiberus\cucumber\page\LoginPage.class
+com\hiberus\cucumber\stepdefs\login\LoginPageSteps.class
+com\hiberus\cucumber\stepdefs\product\ProductPageSteps.class

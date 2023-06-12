@@ -1,37 +1,31 @@
 package com.hiberus.cucumber.ultils;
 
-import static java.security.Security.getProperty;
-
 public class Flags {
-
-    private static final String BROWSER ="browser";
-
-    private static final String HEADLESS ="headless";
-
-    private final String browser = getProperty(BROWSER);
-
-    private final boolean isHeadless = Boolean.parseBoolean(getProperty(HEADLESS));
-
+    private static final String BROWSER = "browser";
+    private static final String HEADLESS = "headless";
+    private final String browser = System.getProperty(BROWSER, "");
+    private final boolean isHeadless = parseBoolean(System.getProperty(HEADLESS, ""));
     private static Flags instance;
-
-    private boolean parseBoolean(String bool){
-        String result = (bool == null) ? "false" : bool;
-        result = result.toLowerCase().trim();
-        return (result.equals("true") || result.equals("false")) && Boolean.parseBoolean(result);
+    private Flags(){
     }
-
     public static Flags getInstance(){
-        if (instance ==null){
+        if(instance == null){
             instance = new Flags();
         }
         return instance;
     }
-
-    public boolean isHeadless(){
+    public String getBrowser() {
+        return this.browser;
+    }
+    public boolean isHeadless() {
         return this.isHeadless;
     }
-
-    public String getBrowser(){
-        return this.browser;
+    private boolean parseBoolean (String string){
+        String value =((string == null) ? "false":string).toLowerCase().trim();
+        if(value.equals("true")||value.equals("false")){
+            return Boolean.parseBoolean(value);
+        }else{
+            return false;
+        }
     }
 }
